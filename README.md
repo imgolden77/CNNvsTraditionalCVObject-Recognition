@@ -4,7 +4,7 @@ This project compares CNN-based and traditional computer vision algorithms (SIFT
 
 ## Overview
 - Task: Object recognition
-- Methods: CNN (PyTorch), SIFT/ORB + BoVW + SVM (OpenCV, sklearn)
+- Methods: CNN (PyTorch), SIFT/Harris + BoVW + SVM (OpenCV, sklearn)
 - Datasets: CIFAR-10 (low-res, large), STL-10 (high-res, small)
 
 ## Results
@@ -21,7 +21,7 @@ This project compares CNN-based and traditional computer vision algorithms (SIFT
 
 ## Folder Structure
 - `cnn/`: PyTorch code for CNN experiments
-- `traditional_cv/`: SIFT/ORB + SVM code
+- `traditional_cv/`: SIFT/Harris + SVM code
 - `results/`: Accuracy, loss plots
 - `models/`: (Optional) saved PyTorch model checkpoints
 
