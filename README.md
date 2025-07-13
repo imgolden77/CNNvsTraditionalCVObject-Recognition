@@ -12,7 +12,7 @@ This project compares CNN-based and traditional computer vision algorithms (SIFT
 |---------------------|----------|--------|
 | CNN (Best Model).   | 76.81%   | 67.47% |
 | SIFT+SVM            | 37.02%   | 39.05% |
-| Pretrained Resnet18 | 85.21%   | 85.21% |
+| Pretrained Resnet18 | 80.63%   | 85.21% |
 
 ## Model Development
 - 15 CNN versions iterated to address overfitting
