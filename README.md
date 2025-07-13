@@ -23,10 +23,8 @@ This project compares CNN-based and traditional computer vision algorithms (SIFT
 ## Folder Structure
 - `cnn/`: PyTorch code for CNN experiments
 - `traditional_cv/`: SIFT/Harris + SVM code
-- `data/`: CIFAR10 and STL10
 - `figures/`: Accuracy and loss figures
 - `resnet18/`: pretrained Resnet18 + Optuna
-- `ckpt/`: saved PyTorch model checkpoints for Resnet18
 
 ## Learnings
 - Dataset size had greater impact than resolution on CNN
