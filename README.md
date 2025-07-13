@@ -1,6 +1,6 @@
 # CNN vs Traditional CV for Object Recognition
 
-This project compares CNN-based and traditional computer vision algorithms (SIFT, ORB + SVM) on CIFAR-10 and STL-10 datasets, analyzing the effects of image resolution and dataset size.
+This project compares CNN-based and traditional computer vision algorithms (SIFT, Harris + SVM) on CIFAR-10 and STL-10 datasets, analyzing the effects of image resolution and dataset size.
 
 ## Overview
 - Task: Object recognition
@@ -8,10 +8,11 @@ This project compares CNN-based and traditional computer vision algorithms (SIFT
 - Datasets: CIFAR-10 (low-res, large), STL-10 (high-res, small)
 
 ## Results
-| Method           | CIFAR-10 | STL-10 |
-|------------------|----------|--------|
-| CNN (Best Model) | 76.81%   | 67.47% |
-| SIFT+SVM         | 37.02%   | 39.05% |
+| Method              | CIFAR-10 | STL-10 |
+|---------------------|----------|--------|
+| CNN (Best Model).   | 76.81%   | 67.47% |
+| SIFT+SVM            | 37.02%   | 39.05% |
+| Pretrained Resnet18 | 85.21%   | 85.21% |
 
 ## Model Development
 - 15 CNN versions iterated to address overfitting
@@ -22,9 +23,13 @@ This project compares CNN-based and traditional computer vision algorithms (SIFT
 ## Folder Structure
 - `cnn/`: PyTorch code for CNN experiments
 - `traditional_cv/`: SIFT/Harris + SVM code
-- `results/`: Accuracy, loss plots
-- `models/`: (Optional) saved PyTorch model checkpoints
+- `data/`: CIFAR10 and STL10
+- `figures/`: Accuracy and loss figures
+- `resnet18/`: pretrained Resnet18 + Optuna
+- `ckpt/`: saved PyTorch model checkpoints for Resnet18
 
 ## Learnings
 - Dataset size had greater impact than resolution on CNN
 - Traditional CV performed better on high-res small datasets
+- Using Harris keypoints before SIFT improved performance on CIFAR-10, despite its lower resolution, by reducing noise and focusing feature extraction.
+- While ResNet18 yielded the best results among tested models, its high parameter count resulted in noticeable overfitting. Regularization and pretraining were critical to its success.
